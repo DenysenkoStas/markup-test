@@ -1,0 +1,17 @@
+.icon-btn {
+  display: flex;
+  color: var(--info);
+
+  &:hover, &:focus-visible {
+    opacity: 0.8;
+    transition: opacity var(--transition-duration);
+  }
+
+  &--active {
+    color: #c8c8c8;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}

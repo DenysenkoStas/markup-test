@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/Header';
+import './assets/styles/main.scss';
+import LoadMoreButton from './components/LoadMoreButton';
+import GridIcon from './assets/icons/grid.svg?react';
+import RowsIcon from './assets/icons/rows.svg?react';
+import {useState} from 'react';
+import IconButton from './components/IconButton';
+import Card from './components/Card';
+import classList from './helpers/classList.ts';
+import {data} from './helpers/mockupData.ts';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [view, setView] = useState<'rows' | 'grid'>('rows');
+
+  const visibleData = view === 'grid' ? data.slice(0, 8) : data;
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main className='main'>
+        <div className='container'>
+          <div className='actions'>
+            <IconButton icon={<GridIcon />} active={view === 'grid'} onClick={() => setView('grid')} />
+            <IconButton icon={<RowsIcon />} active={view === 'rows'} onClick={() => setView('rows')} />
+          </div>
+
+          <div className={classList('list', {'list--grid': view === 'grid'})}>
+            {visibleData.map((card) => (
+              <Card view={view === 'grid' ? 'tile' : 'row'} {...card} />
+            ))}
+          </div>
+
+          <div className='load-more-wrap'>
+            <LoadMoreButton />
+          </div>
+        </div>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
