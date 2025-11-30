@@ -12,10 +12,11 @@ body {
 }
 
 .root {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-flow: column;
-  min-height: 100vh;
+  height: 100vh;
 
   &:before {
     content: '';
@@ -38,7 +39,7 @@ body {
 
   &:after {
     content: '';
-    position: fixed;
+    position: absolute;
     z-index: -1;
     bottom: 41.39px;
     right: 0;
@@ -58,6 +59,7 @@ body {
 }
 
 .main {
+  overflow: auto;
   padding-top: 18px;
   padding-bottom: 61px;
 }

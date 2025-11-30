@@ -1,5 +1,5 @@
-import classList from '../../helpers/classList.ts';
 import type {ReactElement} from 'react';
+import classList from '../../helpers/classList.ts';
 import './index.scss';
 
 interface IconButtonProps {

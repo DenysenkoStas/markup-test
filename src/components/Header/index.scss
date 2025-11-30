@@ -23,6 +23,11 @@
       padding-left: 0;
       gap: 16px;
     }
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   &__logo {
@@ -53,17 +58,26 @@
       align-items: flex-end;
       gap: 16px;
       margin-bottom: 15px;
+
+      @media (max-width: 575px) {
+        gap: 10px;
+      }
     }
 
     &--info {
       gap: 17px;
       margin-bottom: 19px;
       padding-left: 4px;
+
+      @media (max-width: 575px) {
+        gap: 8px;
+      }
     }
 
     &--filter {
       align-items: center;
       padding-left: 2px;
+      gap: 11px;
     }
   }
 
@@ -72,6 +86,10 @@
     font-size: 24px;
     font-weight: 500;
     letter-spacing: -0.01em;
+
+    @media (max-width: 575px) {
+      font-size: 20px;
+    }
   }
 
   &__badge {
@@ -84,14 +102,21 @@
     color: var(--info);
     border: 1px solid var(--info);
     border-radius: 2px;
+
+    @media (max-width: 575px) {
+      padding: 4px 6px;
+      font-size: 12px;
+    }
   }
 
   &__info {
     line-height: 16px;
     font-weight: 400;
 
-    &:first-child {
-      margin-right: 11px;
+    @media (min-width: 768px) {
+      &:first-child {
+        margin-right: 11px;
+      }
     }
 
     b {
@@ -100,25 +125,25 @@
   }
 
   &__label {
-    margin-right: 11px;
     font-size: 16px;
     font-weight: 400;
+
+    @media (max-width: 575px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 374px) {
+      display: none;
+    }
   }
 
   .input-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 22px;
-  }
+    gap: 8px 22px;
 
-  .input-date {
-    padding: 7px 8px;
-    width: 162px;
-    height: 28px;
-    font-size: 13px;
-    font-weight: 400;
-    color: #636264;
-    border: 1px solid #dedede;
-    border-radius: 4px;
+    @media (max-width: 575px) {
+      gap: 8px;
+    }
   }
 }

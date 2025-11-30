@@ -1,7 +1,7 @@
+import classList from '../../helpers/classList.ts';
 import HeartIcon from '../../assets/icons/heart.svg?react';
 import CommentIcon from '../../assets/icons/comment.svg?react';
 import './index.scss';
-import classList from '../../helpers/classList.ts';
 
 interface CardProps {
   view?: 'row' | 'tile';

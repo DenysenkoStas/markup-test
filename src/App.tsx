@@ -1,18 +1,17 @@
-import Header from './components/Header';
-import './assets/styles/main.scss';
-import LoadMoreButton from './components/LoadMoreButton';
-import GridIcon from './assets/icons/grid.svg?react';
-import RowsIcon from './assets/icons/rows.svg?react';
 import {useState} from 'react';
+import Header from './components/Header';
+import LoadMoreButton from './components/LoadMoreButton';
 import IconButton from './components/IconButton';
 import Card from './components/Card';
 import classList from './helpers/classList.ts';
-import {data} from './helpers/mockupData.ts';
+import {mockData, mockDataAlt} from './helpers/mockupData.ts';
+import GridIcon from './assets/icons/grid.svg?react';
+import RowsIcon from './assets/icons/rows.svg?react';
+import './assets/styles/main.scss';
 
 function App() {
   const [view, setView] = useState<'rows' | 'grid'>('rows');
-
-  const visibleData = view === 'grid' ? data.slice(0, 8) : data;
+  const data = view === 'grid' ? mockDataAlt : mockData;
 
   return (
     <>
@@ -25,8 +24,8 @@ function App() {
           </div>
 
           <div className={classList('list', {'list--grid': view === 'grid'})}>
-            {visibleData.map((card) => (
-              <Card view={view === 'grid' ? 'tile' : 'row'} {...card} />
+            {data.map((card, index) => (
+              <Card key={index} view={view === 'grid' ? 'tile' : 'row'} {...card} />
             ))}
           </div>
 

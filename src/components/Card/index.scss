@@ -12,6 +12,11 @@
     object-fit: cover;
     aspect-ratio: 1/1;
 
+    @media (max-width: 575px) {
+      width: 64px;
+      height: 64px;
+    }
+
     .card--tile & {
       width: 100%;
       height: auto;
@@ -23,6 +28,15 @@
     flex: 1;
     justify-content: space-between;
     padding: 16px 79px 16px 30px;
+
+    @media (max-width: 767px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    @media (max-width: 575px) {
+      flex-wrap: wrap;
+    }
 
     .card--tile & {
       padding: 12px 12px 18px;
@@ -40,6 +54,14 @@
     }
 
     &--upload {
+      @media (max-width: 382px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        margin-top: 18px;
+      }
+
       .card--tile & {
         flex-direction: row;
         align-items: center;
@@ -56,11 +78,19 @@
 
   &__label {
     font-size: 16px;
+
+    @media (max-width: 575px) {
+      font-size: 14px;
+    }
   }
 
   &__data {
     display: flex;
     gap: 18px;
+
+    @media (max-width: 575px) {
+      gap: 6px;
+    }
 
     .card--tile & {
       flex-direction: column;
@@ -74,7 +104,17 @@
     gap: 6px;
   }
 
+  &__value {
+    @media (max-width: 575px) {
+      font-size: 12px;
+    }
+  }
+
   &__upload-date {
+    @media (max-width: 575px) {
+      font-size: 12px;
+    }
+
     .card--tile & {
       font-size: 12px;
     }

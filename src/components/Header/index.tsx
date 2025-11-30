@@ -1,3 +1,4 @@
+import DateInput from '../DateInput';
 import logo from '../../assets/images/logo.svg';
 import './index.scss';
 
@@ -29,9 +30,9 @@ export default function Header() {
             <div className='header__row header__row--filter'>
               <span className='header__label'>Date</span>
 
-              <div className="input-row">
-                <input className="input-date" name="from" type='date' />
-                <input className="input-date" name="to"  type='date' />
+              <div className='input-row'>
+                <DateInput placeholder='from' />
+                <DateInput placeholder='to' />
               </div>
             </div>
           </div>

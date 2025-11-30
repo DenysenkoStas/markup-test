@@ -7,8 +7,16 @@ import card6 from '../assets/images/card-6.jpg';
 import card7 from '../assets/images/card-7.jpg';
 import card8 from '../assets/images/card-8.jpg';
 import card9 from '../assets/images/card-9.jpg';
+import cardAlt from '../assets/images/card-alt.jpg';
+import cardAlt2 from '../assets/images/card-alt-2.jpg';
+import cardAlt3 from '../assets/images/card-alt-3.jpg';
+import cardAlt4 from '../assets/images/card-alt-4.jpg';
+import cardAlt5 from '../assets/images/card-alt-5.jpg';
+import cardAlt6 from '../assets/images/card-alt-6.jpg';
+import cardAlt7 from '../assets/images/card-alt-7.jpg';
+import cardAlt8 from '../assets/images/card-alt-8.jpg';
 
-export const data = [
+export const mockData = [
   {
     img: card,
     imgAlt: 'Card',
@@ -92,6 +100,89 @@ export const data = [
   {
     img: card9,
     imgAlt: 'Card 9',
+    todayLikes: 128,
+    todayComments: 31,
+    selectedDate: '9-08-2016',
+    selectedDateLikes: 67,
+    selectedDateComments: 22,
+    uploadDate: '11-04-2016'
+  }
+];
+
+export const mockDataAlt = [
+  {
+    img: cardAlt,
+    imgAlt: 'Card',
+    todayLikes: 128,
+    todayComments: 31,
+    selectedDate: '9-08-2016',
+    selectedDateLikes: 67,
+    selectedDateComments: 22,
+    uploadDate: '11-04-2016'
+  },
+  {
+    img: cardAlt2,
+    imgAlt: 'Card 2',
+    todayLikes: 128,
+    todayComments: 31,
+    selectedDate: '9-08-2016',
+    selectedDateLikes: 67,
+    selectedDateComments: 22,
+    uploadDate: '11-04-2016'
+  },
+  {
+    img: cardAlt3,
+    imgAlt: 'Card 3',
+    todayLikes: 128,
+    todayComments: 31,
+    selectedDate: '9-08-2016',
+    selectedDateLikes: 67,
+    selectedDateComments: 22,
+    uploadDate: '11-04-2016'
+  },
+  {
+    img: cardAlt4,
+    imgAlt: 'Card 4',
+    todayLikes: 128,
+    todayComments: 31,
+    selectedDate: '9-08-2016',
+    selectedDateLikes: 67,
+    selectedDateComments: 22,
+    uploadDate: '11-04-2016'
+  },
+  {
+    img: cardAlt5,
+    imgAlt: 'Card 5',
+    todayLikes: 128,
+    todayComments: 31,
+    selectedDate: '9-08-2016',
+    selectedDateLikes: 67,
+    selectedDateComments: 22,
+    uploadDate: '11-04-2016'
+  },
+  {
+    img: cardAlt6,
+    imgAlt: 'Card 6',
+    todayLikes: 128,
+    todayComments: 31,
+    selectedDate: '9-08-2016',
+    selectedDateLikes: 67,
+    selectedDateComments: 22,
+    uploadDate: '11-04-2016'
+  },
+  {
+    img: cardAlt7,
+    imgAlt: 'Card 7',
+    todayLikes: 128,
+    todayComments: 31,
+    selectedDate: '9-08-2016',
+    selectedDateLikes: 67,
+    selectedDateComments: 22,
+    uploadDate: '11-04-2016'
+  },
+  {
+    img: cardAlt8,
+    imgAlt: 'Card 8',
     todayLikes: 128,
     todayComments: 31,
     selectedDate: '9-08-2016',
